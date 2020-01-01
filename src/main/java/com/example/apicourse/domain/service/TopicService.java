@@ -1,20 +1,15 @@
-package com.example.apicourse.topics;
+package com.example.apicourse.domain.service;
 
+import com.example.apicourse.domain.data.Topic;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service // Spring business service
 public class TopicService {
 
-    List<Topic> topics = new ArrayList<>(Arrays.asList(
-            new Topic("spring", "Spring Framework", "EasyBook"),
-            new Topic("java", "CORE", "For Beginners"),
-            new Topic("Maths", "Calculus", "For Dummies")
-    ));
+    List<Topic> topics = new ArrayList<>( );
 
     public List<Topic> getAllTopics() {
         return topics;

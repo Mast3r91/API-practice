@@ -1,6 +1,11 @@
-package com.example.apicourse.topics;
+package com.example.apicourse.domain.data;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Topic {
+    @Id
     private String id;
     private String name;
     private String description;

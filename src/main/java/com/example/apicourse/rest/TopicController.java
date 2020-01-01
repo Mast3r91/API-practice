@@ -1,10 +1,10 @@
-package com.example.apicourse.topics;
+package com.example.apicourse.rest;
 
+import com.example.apicourse.domain.data.Topic;
+import com.example.apicourse.domain.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLOutput;
-import java.util.Arrays;
 import java.util.List;
 
 @RestController

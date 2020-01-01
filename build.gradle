@@ -17,6 +17,8 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb:2.1.6.RELEASE")
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '1.0.0.RELEASE'
 }
 
 test {
