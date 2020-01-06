@@ -1,14 +1,14 @@
 package com.example.apicourse.rest.dto;
 
-public class TopicRespone {
+public class TopicRequest {
     private String id;
     private String name;
     private String description;
 
-    public TopicRespone() {
+    public TopicRequest() {
     }
 
-    public TopicRespone(String id, String name, String description) {
+    public TopicRequest(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,4 +26,6 @@ public class TopicRespone {
     public String getDescription() {
         return description;
     }
+
+
 }
