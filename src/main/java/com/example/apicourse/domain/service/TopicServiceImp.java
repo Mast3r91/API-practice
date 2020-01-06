@@ -28,8 +28,8 @@ public class TopicServiceImp  implements TopicService{
 
     public TopicModel getSpecificTopic(String id) {
         //call Repos
-        Topic topic=this.topicRepos.findOne(id);
-        return new TopicModel(topic.getId(), topic.getName(), topic.getDescription());
+        Optional<Topic> topic=this.topicRepos.findById(id);
+        return new TopicModel(topic.get().getId(), topic.get().getName(), topic.get().getDescription());
     }
 
     //POST
@@ -40,16 +40,16 @@ public class TopicServiceImp  implements TopicService{
         //PUT
     public void updateSpecificTopic(String name,String desc, String id) {
         // you have to get first then update then save.
-        Topic topic = this.topicRepos.findOne(id); // i got an object identified by this id
-        topic.setName(name);
-        topic.setDescription(desc);
+//        Topic topic = this.topicRepos.findById(id); // i got an object identified by this id
+//        topic.setName(name);
+//        topic.setDescription(desc);
         // i did not update id (problem)
 
-        this.topicRepos.save(topic);
+//        this.topicRepos.save(topic);
     }
         //DELETE
     public void deleteSpecificTopic(String id) {
-        this.topicRepos.delete(id);
+        this.topicRepos.deleteById(id);
     }
 }
 

@@ -1,4 +1,4 @@
 Spring:
   data:
     mongodb:
-      uri: mongodb://localhost/gateway_adapter
+      uri: mongodb://localhost
